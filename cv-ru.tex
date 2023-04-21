@@ -1,0 +1,203 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+\usepackage{mathtext}
+\usepackage[T2A]{fontenc} % внутренняя T2A кодировка TeX
+\usepackage[utf8]{inputenc}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+    \pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+    \begin{tabularx}{\linewidth}{@{} C @{}}
+        \Huge{Байлак Монгуш} \\[7.5pt]
+        \href{https://github.com/baylakmongush}{\raisebox{-0.05\height}\faGithub\ baylakmongush} \ $|$ \
+        \href{https://linkedin.com/in/baylak-mongush}{\raisebox{-0.05\height}\faLinkedin\ baylakmongush} \ $|$ \
+% \href{https://baylakmongush.com}{\raisebox{-0.05\height}\faGlobe \ baylakmongush.com} \ $|$ \
+        \href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ mail@baylakmongush.com} \ $|$ \
+        \href{tel:+79267898993}{\raisebox{-0.05\height}\faMobile \ +79267898993} \\
+    \end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Experience
+    \section{Work Experience}
+
+    \begin{tabularx}{\linewidth}{ @{}l r@{} }
+        \textbf{ПАО Сбербанк - DevOps-инженер} & \hfill Февраль 2021 - Май 2023 \\[3.75pt]
+        \multicolumn{2}{@{}X@{}}{
+            \begin{minipage}[t]{\linewidth}
+                \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+                    \item [-] Работа с дефектами и инцидентами для устранения технологических проблем.
+                    \item [-] Участие в написании playbooks и ролей Ansible для развертывания приложений, таких как Nifi, Flink и для базовой настройки серверов Linux RHEL.
+                    \item [-] Разработка и управление процессами CI/CD с использованием различных инструментов, таких как Git, Jenkins, Jira
+                    \item [-] Администрирование и сопровождение серверов в тестовых средах и production-средах.
+                    \item [-] Непрерывная интеграция (Jenkins)
+                    \item [-] Написание скриптов и инструментов для автоматизации (Bash, Python)
+                    \item [-] Написание технической документации для пользователей.
+                    \item [-] Близкое сотрудничество с разработчиками, инженерами по качеству, аналитиками и архитекторами для решения проблем, возникающих во время цикла разработки и доставки ПО.
+                    \item [-] Поддержка и развитие систем мониторинга (Grafana, Alerting).
+                    \item [-] Обучение и менторство стажеров.
+                \end{itemize}
+            \end{minipage}
+        }
+    \end{tabularx}
+
+
+    \begin{tabularx}{\linewidth}{ @{}l r@{} }
+        \textbf{Koro.games - Unity-разработчик} & \hfill Март 2020 - Февраль 2021 \\[3.75pt]
+        \multicolumn{2}{@{}X@{}}{
+            \begin{minipage}[t]{\linewidth}
+                \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+                    \item [-] Разработка мобильных игр на Unity: написание скриптов, программирование игровой механики, физики, взаимодействие с UI.
+                    \item [-] Разработка фич, участие в обновлении и поддерживании игры.
+                \end{itemize}
+            \end{minipage}
+        }
+    \end{tabularx}
+
+%Projects
+    \section{Projects}
+
+    \begin{tabularx}{\linewidth}{ @{}l r@{} }
+        \textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
+        \multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
+    \end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+    \section{Education}
+    \begin{tabularx}{\linewidth}{@{}l X@{}}
+        2019 - 2022 & School of Programming 21 \hfill \normalsize \\
+
+        2018 - 2020 & Бакалавр "Сибирский федеральный университет" направления "Прикладная информатика", обучение прервано в связи с переездом \hfill \\
+    \end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+    \section{Skills}
+    \begin{tabularx}{\linewidth}{@{}l X@{}}
+        Clouds and containers:  &  \normalsize{Docker, Docker-Compose, Kubernetes}\\
+        Configuration and infrastructure management:  &  \normalsize{Ansible}\\
+        CI/CD:  &  \normalsize{Jenkins}\\
+        Languages:  &  \normalsize{Python, Bash, SQL, C/C++, C\#, Groovy}\\
+        Monitoring, Logging and Alerting:  &  \normalsize{Grafana, Zabbix}\\
+        Databases:  &  \normalsize{MySQL, PostgreSQL, Clickhouse}\\
+        Operating Systems:  &  \normalsize{Linux-based, Mac OS X}\\
+        Other:  &  \normalsize{Nginx, VMWare, Git, Apache Kafka, Apache Flink}\\
+    \end{tabularx}
+
+\end{document}
