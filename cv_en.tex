@@ -34,9 +34,10 @@
 
 % % fontspec allows you to use TTF/OTF fonts directly
 % \usepackage{fontspec}
-\usepackage{mathtext}
-\usepackage[T2A]{fontenc} % внутренняя T2A кодировка TeX
+\usepackage[T2A,T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage[default,scale=0.85]{opensans}
 % \defaultfontfeatures{Ligatures=TeX}
 
 % % modified for ShareLaTeX use
@@ -197,14 +198,20 @@
 %----------------------------------------------------------------------------------------
     \section{Skills}
     \begin{tabularx}{\linewidth}{@{}l X@{}}
-        Clouds and containers:  &  \normalsize{Docker, Docker Compose, Kubernetes, Helm Charts}\\
-        Configuration and infrastructure management:  &  \normalsize{Ansible}\\
-        CI/CD:  &  \normalsize{Jenkins}\\
-        Languages:  &  \normalsize{Python, Bash, SQL, C/C++, C\#, Groovy}\\
-        Monitoring, Logging and Alerting:  &  \normalsize{Grafana, Zabbix}\\
-        Databases:  &  \normalsize{MySQL, PostgreSQL, Clickhouse}\\
-        Operating Systems:  &  \normalsize{Linux-based, Mac OS X}\\
-        Infrastructure:  &  \normalsize{Nginx, Git, Apache Kafka, Apache Flink}\\
+        \begin{minipage}[t]{\linewidth}
+            \begin{itemize}[nosep,after=\strut, leftmargin=0em,itemsep=3pt]
+
+                \textbf{Clouds and containers:} \quad Docker, \quad Docker Compose, \quad Kubernetes, \quad Helm Charts \\
+                \textbf{Configuration and infrastructure management:} \quad Ansible \\
+                \textbf{CI/CD:} \quad Jenkins, \quad Github Actions \\
+                \textbf{Programming Languages:} \quad Python, \quad Bash, \quad SQL, \quad C/C++, \quad C#, \quad Groovy \\
+                \textbf{Monitoring, Logging and Alerting:} \quad Grafana, \quad Zabbix \\
+                \textbf{Databases:} \quad MySQL, \quad PostgreSQL, \quad Clickhouse \\
+                \textbf{Operating Systems:} \quad Linux \\
+                \textbf{Infrastructure:} \quad Nginx, \quad Git, \quad Apache Kafka, \quad Apache Flink \\
+                \textbf{Languages:} \quad English (B1), \quad Russian (C2) \\
+            \end{itemize}
+        \end{minipage}
     \end{tabularx}
 
 \end{document}
