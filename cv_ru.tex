@@ -98,6 +98,7 @@
 
 %for social icons
 \usepackage{fontawesome5}
+\usepackage{amsmath}
 
 %debug page outer frames
 %\usepackage{showframe}
@@ -191,7 +192,7 @@
 %----------------------------------------------------------------------------------------
     \section{Education}
     \begin{tabularx}{\linewidth}{@{}l X@{}}
-        2019 - 2022 & 42 Ecole (Higher Education in Computer Science) \hfill \href{https://drive.google.com/file/d/1pi3wYP-_d-a6-rgBBDTx_C0VLodl-IF5/view?usp=sharing}{Ссылка на сертификат} \\[3.75pt]
+        2019 - 2022 & 42 Ecole (Higher Education in Computer Science) \hfill \href{https://drive.google.com/file/d/1pi3wYP-_d-a6-rgBBDTx_C0VLodl-IF5/view?usp=sharing}{\textcyrillic{Ссылка на сертификат}} \\[3.75pt]
 
         2018 - 2020 & \textcyrillic{Бакалавр по направлению "Прикладная информатика" в Сибирском федеральном университете. Прошла два курса обучения.} \hfill \\
     \end{tabularx}
@@ -200,22 +201,17 @@
 %	SKILLS
 %----------------------------------------------------------------------------------------
     \section{Skills}
-
-    \begin{tabularx}{\linewidth}{ @{}l r@{} }
-        \begin{minipage}[t]{\linewidth}
-            \begin{itemize}[nosep,after=\strut, leftmargin=0em,itemsep=3pt]
-
-                \textbf{Clouds and containers:} \quad Docker, \quad Docker Compose, \quad Kubernetes, \quad Helm Charts \\
-                \textbf{Configuration and infrastructure management:} \quad Ansible \\
-                \textbf{CI/CD:} \quad Jenkins, \quad Github Actions \\
-                \textbf{Programming Languages:} \quad Python, \quad Bash, \quad SQL, \quad C/C++, \quad C#, \quad Groovy \\
-                \textbf{Monitoring, Logging and Alerting:} \quad Grafana, \quad Zabbix \\
-                \textbf{Databases:} \quad MySQL, \quad PostgreSQL, \quad Clickhouse \\
-                \textbf{Operating Systems:} \quad Linux \\
-                \textbf{Infrastructure:} \quad Nginx, \quad Git, \quad Apache Kafka, \quad Apache Flink \\
-                \textbf{Languages:} \quad English (B1), \quad Russian (C2) \\
-            \end{itemize}
-        \end{minipage}
+    \renewcommand{\arraystretch}{1.1}
+    \begin{tabularx}{\linewidth}{@{}l X@{}}
+        \textbf{Clouds and containers:}\quad Docker, \quad Docker Compose, \quad Kubernetes, \quad Helm Charts \\
+        \textbf{Configuration and infrastructure management:}\quad Ansible \\
+        \textbf{CI/CD:}\quad Jenkins, \quad Github Actions \\
+        \textbf{Programming Languages:}\quad Python, \quad Bash, \quad SQL, \quad C/C++, \quad C\#, \quad Groovy \\
+        \textbf{Monitoring, Logging and Alerting:}\quad Grafana, \quad Zabbix \\
+        \textbf{Databases:}\quad MySQL, \quad PostgreSQL, \quad Clickhouse \\
+        \textbf{Operating Systems:}\quad Linux \\
+        \textbf{Infrastructure:}\quad Nginx, \quad Git, \quad Apache Kafka, \quad Apache Flink \\
+        \textbf{Languages:}\quad English (B1), \quad Russian (C2) \\
     \end{tabularx}
 
 \end{document}

@@ -69,9 +69,9 @@
 % centered version of 'X' col. type
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 
+
 %to prevent spillover of tabular into next pages
 \usepackage{supertabular}
-\usepackage{tabularx}
 \newlength{\fullcollw}
 \setlength{\fullcollw}{0.47\textwidth}
 
@@ -97,6 +97,7 @@
 
 %for social icons
 \usepackage{fontawesome5}
+\usepackage{amsmath}
 
 %debug page outer frames
 %\usepackage{showframe}
@@ -123,7 +124,6 @@
         \Huge{Baylak Mongush} \\[7.5pt]
         \href{https://github.com/baylakmongush}{\raisebox{-0.05\height}\faGithub\ baylakmongush} \ $|$ \
         \href{https://linkedin.com/in/baylak-mongush}{\raisebox{-0.05\height}\faLinkedin\ baylakmongush} \ $|$ \
-% \href{https://baylakmongush.com}{\raisebox{-0.05\height}\faGlobe \ baylakmongush.com} \ $|$ \
         \href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ mail@baylakmongush.com} \ $|$ \
         \href{tel:+79267898993}{\raisebox{-0.05\height}\faMobile \ +79267898993} \\
     \end{tabularx}
@@ -169,7 +169,7 @@
         \multicolumn{2}{@{}X@{}}{
             \begin{minipage}[t]{\linewidth}
                 \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-                    \item [-] Development of mobile casual games on Unity (C#): writing scripts, programming game mechanics, physics, interaction with UI.
+                    \item [-] Development of mobile casual games on Unity (C\#): writing scripts, programming game mechanics, physics, interaction with UI.
                     \item [-] Development of features and participation in updates of the mobile multiplayer game \href{https://play.google.com/store/apps/details?id=war.of.islands}{War of Rafts}.
                 \end{itemize}
             \end{minipage}
@@ -197,21 +197,17 @@
 %	SKILLS
 %----------------------------------------------------------------------------------------
     \section{Skills}
+    \renewcommand{\arraystretch}{1.2}
     \begin{tabularx}{\linewidth}{@{}l X@{}}
-        \begin{minipage}[t]{\linewidth}
-            \begin{itemize}[nosep,after=\strut, leftmargin=0em,itemsep=3pt]
-
-                \textbf{Clouds and containers:} \quad Docker, \quad Docker Compose, \quad Kubernetes, \quad Helm Charts \\
-                \textbf{Configuration and infrastructure management:} \quad Ansible \\
-                \textbf{CI/CD:} \quad Jenkins, \quad Github Actions \\
-                \textbf{Programming Languages:} \quad Python, \quad Bash, \quad SQL, \quad C/C++, \quad C#, \quad Groovy \\
-                \textbf{Monitoring, Logging and Alerting:} \quad Grafana, \quad Zabbix \\
-                \textbf{Databases:} \quad MySQL, \quad PostgreSQL, \quad Clickhouse \\
-                \textbf{Operating Systems:} \quad Linux \\
-                \textbf{Infrastructure:} \quad Nginx, \quad Git, \quad Apache Kafka, \quad Apache Flink \\
-                \textbf{Languages:} \quad English (B1), \quad Russian (C2) \\
-            \end{itemize}
-        \end{minipage}
+        \textbf{Clouds and containers:}\quad Docker, \quad Docker Compose, \quad Kubernetes, \quad Helm Charts \\
+        \textbf{Configuration and infrastructure management:}\quad Ansible \\
+        \textbf{CI/CD:}\quad Jenkins, \quad Github Actions \\
+        \textbf{Programming Languages:}\quad Python, \quad Bash, \quad SQL, \quad C/C++, \quad C\#, \quad Groovy \\
+        \textbf{Monitoring, Logging and Alerting:}\quad Grafana, \quad Zabbix \\
+        \textbf{Databases:}\quad MySQL, \quad PostgreSQL, \quad Clickhouse \\
+        \textbf{Operating Systems:}\quad Linux \\
+        \textbf{Infrastructure:}\quad Nginx, \quad Git, \quad Apache Kafka, \quad Apache Flink \\
+        \textbf{Languages:}\quad English (B1), \quad Russian (C2) \\
     \end{tabularx}
 
 \end{document}
