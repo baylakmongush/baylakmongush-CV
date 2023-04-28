@@ -3,13 +3,15 @@
 This is my CV written in LaTeX, available in both Russian and English languages.
 
 <p align="center">
-    <a href="screens/cv_en_page-0001.jpg" target="_blank">
-        <img src="screens/cv_en_page-0001.jpg" onclick="javascript:window.open('screens/cv_en_page-0001.jpg')" width="200" style="display: inline-block;>
+    <a href="output/cv_en.pdf" target="_blank">
+        <img src="screens/cv_en_page-0001.jpg" onclick="javascript:window.open('screens/cv_en_page-0001.jpg')" width="200" style="display: inline-block;">
     </a>
-    <a href="screens/cv_ru_page-0001.jpg" target="_blank">
-        <img src="screens/cv_ru_page-0001.jpg" onclick="javascript:window.open('screens/cv_ru_page-0001.jpg')" width="200" style="display: inline-block;>
+    <a href="output/cv_ru.pdf" target="_blank">
+        <img src="screens/cv_ru_page-0001.jpg" onclick="javascript:window.open('screens/cv_ru_page-0001.jpg')" width="200" style="display: inline-block;">
     </a>
 </p>
+
+
 
 ### How to generate PDF from source code?
 
