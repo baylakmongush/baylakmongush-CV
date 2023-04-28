@@ -2,7 +2,6 @@
 
 This is my CV written in LaTeX, available in both Russian and English languages.
 
-[//]: # (<img src="screens/cv_en_page-0001.jpg"> <img src="screens/cv_ru_page-0001.jpg">)
 <p align="center">
     <a href="screens/cv_en_page-0001.jpg" target="_blank">
         <img src="screens/cv_en_page-0001.jpg" onclick="javascript:window.open('screens/cv_en_page-0001.jpg')" width="200" style="display: inline-block;>
