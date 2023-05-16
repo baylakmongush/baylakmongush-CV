@@ -1,3 +1,14 @@
 .idea
 out
 .DS_Store
+output/cv_ru.aux
+output/cv_ru.bcf
+output/cv_ru.log
+output/cv_ru.out
+output/cv_ru.run.xml
+output/texput.log
+output/cv_en.aux
+output/cv_en.bcf
+output/cv_en.log
+output/cv_en.out
+output/cv_en.run.xml

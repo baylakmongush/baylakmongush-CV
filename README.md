@@ -42,7 +42,7 @@ docker build -t latex .
 * To generate the English version of the CV, run the following command:
 
 ```
-docker run -v `pwd`:/tmp latex pdflatex cv_en.tex citations.bib
+docker run -v `pwd`:/tmp latex pdflatex -output-directory=/tmp/output cv_en.tex citations.bib
 ```
 
 The resulting PDF file will be saved in the output directory.
@@ -50,7 +50,7 @@ The resulting PDF file will be saved in the output directory.
 * To generate the Russian version of the CV, run the following command:
 
 ```
-docker run -v `pwd`:/tmp latex pdflatex cv_ru.tex citations.bib
+docker run -v `pwd`:/tmp latex pdflatex -output-directory=/tmp/output cv_ru.tex citations.bib
 ```
 
 The resulting PDF file will be saved in the output directory.
